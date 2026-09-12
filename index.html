@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balenié Luxury Jewels</title>
+    <meta name="description"
+        content="Shop premium jewelry, statement caps, and accessories from Balenié Luxury Jewels.">
+    <meta name="theme-color" content="#111111">
+    <link rel="icon" type="image/jpeg" href="images/brand-logo.png.jpg">
+    <meta property="og:title" content="Balenié Luxury Jewels">
+    <meta property="og:description"
+        content="Premium jewelry, statement caps, and accessories made for everyday expression.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/brand-logo.png.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Balenié Luxury Jewels">
+    <meta name="twitter:description"
+        content="Premium jewelry, statement caps, and accessories made for everyday expression.">
+    <meta name="twitter:image" content="images/brand-logo.png.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#collections">Collections</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button id="searchBtn" class="icon-btn"></button>
+
+            <button id="cartBtn" class="cart-btn">
+                🛒
+                <span id="cartCount">0</span>
+            </button>
+
+            <button class="menu-btn" id="menuBtn">=</button>
+        </div>
+
+    </header>
+
+
+    <!-- SEARCH -->
+    <div class="search-box" id="searchbox">
+        <input type="text" id="searchinput" placeholder="Search jewelry, caps, accesories...">
+    </div>
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">NEW COLLECTION 2026</p>
+
+                </h1>
+                Elevate Your
+                <span>Everyday.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Premium jewelry, statement caps and accessories
+                    made for people who dont follow the crowd.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#shop" class="primary-btn">Shop Collection </a>
+                    <a href="#collections" class="secondary-btn">Explore</a>
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <div class="hero-card">
+
+                    <div class="floating-label">
+                        <small>FEATURED</small>
+                        <strong>Signature Collection</strong>
+                    </div>
+
+                    <div class="hero-product"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURES -->
+        <section class="features">
+
+            <div>
+                <strong> Premium Quality</strong>
+                <span>Made to last</span>
+            </div>
+
+            <div>
+                <strong>🚚 Fast Delivery</strong>
+                <span>Across France and Worldwide</span>
+            </div>
+
+            <div>
+                <span>Shop with Confidence</span>
+            </div>
+
+            <div>
+                <strong> Secure Shopping</strong>
+                <span>Your details are safe</span>
+            </div>
+
+        </section>
+
+        <!-- SHOP -->
+        <section class="shop-section" id="shop">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">OUR PRODUCTS</p>
+                    <h2>Shop the Latest.</h2>
+                </div>
+
+                <div class="categories">
+
+                    <button class="category active" data-category="all">
+                        ALL
+                    </button>
+
+                    <button class="category" data category="jewelry">
+                        Jewelry
+                    </button>
+
+                    <button class="category" data category="caps">
+                        Caps
+                    </button>
+
+                    <button class="catrgory" data category="accessories">
+                        Accessories
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="products" id="products">
+
+                <!-- PRODUCT 1 -->
+                <article class="product-card" data-category="jewelry" data-name="Floral Gold Earring" data-price="15">
+
+                    <div class="product-image">
+                        <span class="badge">NEW</span>
+                        <img src="images/Floral Gold Earring.jpg" alt="Floral Gold Earring">
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>Floral Gold Earring</h3>
+                            <p>Gold Plated</p>
+                        </div>
+
+                        <strong>€15</strong>
+
+                    </div>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+
+                <!-- PRODUCT 2 -->
+                <article class="product-card" data-category="jewelry" data-name="Aureilia Golden Hoop Earring"
+                    data-price="18">
+
+                    <div class="product-image g">
+                        <span class="badge">NEW</span>
+                        <img src="images/Aureilia Golden Hoop Earring.jpg" alt="Aureilia Golden Hoop Earring">
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>Aureilia Golden Hoop Earring</h3>
+                            <p>Pure Gold</p>
+                        </div>
+
+                        <strong>€18</strong>
+
+                    </div>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+
+                <!-- PRODUCT 3 -->
+                <article class="product-card" data-category="jewelry"
+                    data-name="Two Stone Shell & Interlocking Earrings" data-price="12">
+
+                    <div class="product-image">
+                        <img src="images/Two Stone shell and interlocking earrings.jpg"
+                            alt="Two Stone Shell and Interlocking Earrings">
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>Two Stone Shell & Interlocking Earrings</h3>
+                            <p>silver plated</p>
+                        </div>
+
+                        <strong>€12</strong>
+
+                    </div>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+
+                <!-- PRODUCT 4 -->
+                <article class="product-card" data-category="jewelry" data-name="Golden Rectangular Hoops Earrings"
+                    data-price="12">
+
+                    <div class="product-image">
+                        <img src="images/Golden Rectangular Hoops Earrings.jpg" alt="Golden Rectangular Hoops Earrings">
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>Golden Rectangular Hoops Earrings</h3>
+                            <p>Gold plated</p>
+                        </div>
+
+                        <strong>€12</strong>
+
+                    </div>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+
+                <!-- PRODUCT 5 -->
+                <article class="product-card" data-category="jewelry" data-name="Tri-Tone Spheres Drop Earrings"
+                    data-price="12">
+
+                    <div class="product-image">
+                        <img src="images/Tri Tone Sphered drop Earrings.jpg" alt="Tri-Tone Sphered Drop Earrings">
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>Tri-Tone Sphered Drop Earrings</h3>
+                            <p>Tri-Tone</p>
+                        </div>
+
+                        <strong>€12</strong>
+
+                    </div>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+
+                <!-- PRODUCT 6 -->
+                <article class="product-card" data-category="jewelry" data-name="Zirconia Rings" data-price="5">
+
+                    <div class="product-image silver,">
+                        <img src="images/Zirconia Gold and Silver Rings.jpg" alt="Zirconia Gold and Silver Rings">
+                    </div>
+
+                    <div class="product info">
+
+                        <div>
+                            <h3>Zirconia Gold and Silver Rings</h3>
+                            <p>classic Rings</p>
+
+
+                            <strong>€5</strong>
+
+                        </div>
+
+                        <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+
+                <!-- PRODUCT 7 -->
+                <article class="product-card" data-category="jewelry" data-name="Golden Teardrop Earring"
+                    data-price="12">
+
+                    <div class="product-image">
+                        <img src="images/Golden Teardrop earring.jpg" alt="Golden Teardrop Earring">
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>Golden Teardrop Earring</h3>
+                            <p>Gold plated</p>
+                        </div>
+
+                        <strong>€12</strong>
+
+                    </div>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+
+                <!-- PRODUCT 8 -->
+                <article class="product-card" data-category="jewelry" data-name="Textured Gilded Taper Earring"
+                    data-price="12">
+
+                    <div class="product-image">
+                        <img src="images/Textured Gilded Taper.jpg" alt="Textured Gilded Taper Earring">
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>Textured Gilded Taper</h3>
+                            <p>Gold Plated</p>
+                        </div>
+
+                        <strong>€12</strong>
+
+                    </div>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+
+                <!-- PRODUCT 9 -->
+                <article class="product-card" data-category="jewelry"
+                    data-name="Triple Flowers with Interlocking Hoop Earrings" data-price="12">
+
+                    <div class="product-image">
+                        <img src="images/Triple Flowers Hoop Earrings.jpg" alt="Triple Flowers Hoop Earrings">
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>Triple Flowers Hoop Earrings</h3>
+                            <p>Gold plated</p>
+                        </div>
+
+                        <strong>€12</strong>
+
+                    </div>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+                <!-- PRODUCT 10 -->
+                <article class="product-card" data-category="caps" data-name="Essential Blue Cap" data-price="30">
+
+                    <div class="product-image">
+                        <span class="badge">NEW</span>
+                        <img src="images/Essential Blue Cap.jpg" alt="Essential Blue Cap">
+                        <div class="product-symbol"></div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>Essential Blue Cap</h3>
+                            <p>Premium Cotton</p>
+                        </div>
+
+                        <strong>€30</strong>
+
+                    </div>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+
+                <!-- PRODUCT 11 -->
+                <article class="product-card" data-category="caps" data-name="Essential Yellow Cap" data-price="30">
+
+                    <div class="product-image">
+                        <span class="badge">NEW</span>
+                        <img src="images/Essential Yellow Cap.jpg" alt="Essential Yellow Cap">
+                        <div class="product-symbol"></div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>Essential Yellow Cap</h3>
+                            <p>Premium Cotton</p>
+                        </div>
+
+                        <strong>€30</strong>
+
+                    </div>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+
+                <!-- PRODUCT 12 -->
+                <article class="product-card" data-category="caps" data-name="Essential Ox Red Cap" data-price="30">
+
+                    <div class="product-image">
+                        <span class="badge">NEW</span>
+                        <img src="images/Essential Ox Red Cap.jpg" alt="Essential Ox Red Cap">
+                        <div class="product-symbol"></div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>Essential Ox Red Cap</h3>
+                            <p>Premium Cotton</p>
+                        </div>
+
+                        <strong>€30</strong>
+
+                    </div>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+
+                <!-- PRODUCT 13 -->
+                <article class="product-card" data-category="caps" data-name="Essential BrownCap" data-price="30">
+
+                    <div class="product-image">
+                        <span class="badge">NEW</span>
+                        <img src="images/Essential Brown Cap.jpg" alt="Essential Brown Cap">
+                        <div class="product-symbol"></div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>Essential Brown Cap</h3>
+                            <p>Premium Cotton</p>
+                        </div>
+
+                        <strong>€30</strong>
+
+                    </div>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+
+                <!-- PRODUCT 14 -->
+                <article class="product-card" data-category="caps" data-name="Essential Dark Blue Cap" data-price="30">
+
+                    <div class="product-image">
+                        <span class="badge">NEW</span>
+                        <img src="images/Essential Dark Blue Cap.jpg" alt="Essential Dark Blue Cap">
+                        <div class="product-symbol"></div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>Essential Dark Blue Cap</h3>
+                            <p>Premium Cotton</p>
+                        </div>
+
+                        <strong>€30</strong>
+
+                    </div>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- COLLECTIONS -->
+        <section class="collections" id="collections">
+
+            <div class="collection-card jewelry-collection">
+
+                <div>
+                    <p>01 - JEWELRY</p>
+                    <h2>Small details.<br>Big energy.</h2>
+                    <a href="#shop">Shop Jewelry →</a>
+                </div>
+
+            </div>
+
+
+            <div class="collection-card caps-collection">
+
+                <div>
+                    <p>02 - HEADWEAR</p>
+                    <h2>Top off<br>your look.</h2>
+                    <a href="#shop">Shop Caps →</a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+
+            <p class="eyebrow">ABOUT US</p>
+
+            <h2>BALENIÉ LUXURY JEWELS</h2>
+            <p>Welcome to BALENIÉ LUXURY JEWELS, where elegance meets innovation. Our carefully curated collection
+                features
+                stunning pieces that celebrate the beauty of fine craftsmanship and timeless design.
+            </p>
+
+            <p>At BALENIÉ LUXURY JEWELS, we believe that jewelry is more than just an accessory; it's a reflection of
+                your style and who you are. Each piece in our collection is thoughtfully designed to capture the essence
+                of sophistication and individuality.
+            </p>
+
+        </section>
+
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter">
+
+            <div>
+                <p class="eyebrow">STAY IN THE LOOP</p>
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates on new arrivals, special offers, and exclusive content.</p>
+            </div>
+
+            <form id="newsletterForm">
+
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">
+                    Subscribe →
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-top">
+
+            <div>
+                <a href="#" class="logo">
+                    <img src="images/brand-logo.png.jpg" alt="Balenié Luxury Jewels">
+                </a>
+                <p>
+                    Jewelry, accessories and headwear for your everyday expression.
+                </p>
+            </div>
+
+            <div>
+                <h4>SHOP</h4>
+                <a href="#shop">Jewelry</a>
+                <a href="#shop">Caps</a>
+                <a href="#shop">Accessories</a>
+            </div>
+
+            <div>
+                <h4>HELP</h4>
+                <a href="#">Delivery</a>
+                <a href="#">Returns</a>
+                <a href="#">Contact Us</a>
+            </div>
+
+            <div>
+                <h4>FOLLOW US</h4>
+                <a href="#">Instagram</a>
+
+                <a href="#">TikTok</a>
+
+                <a href="#">Whatsapp</a>
+            </div>
+
+            <div>
+                <h4>CONTACT</h4>
+                <a href="tel:+33766509993">+33 7 66 50 99 93</a>
+                <a href="mailto:amopebalogun@gmail.com">amopebalogun@gmail.com</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 BALENIÉ LUXURY JEWELS. ALL RIGHTS RESERVED.</span>
+            <span>MADE FOR YOU.</span>
+        </div>
+
+    </footer>
+
+    <!-- CART -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart" id="cart">
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <button id="closeCart">X</button>
+
+        </div>
+
+        <div class="cart-items" id="cartItems">
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="total">
+                <span>Total:</span>
+                <strong id="cartTotal">€0</strong>
+            </div>
+
+            <button class="checkout-btn" id="checkoutBtn">
+                Checkout →
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
