@@ -169,38 +169,46 @@ const categoryButtons =
 const products =
     document.querySelectorAll(".product-card");
 
+const noProductsMessage =
+    document.getElementById("noProductsMessage");
+
+function applyCategory(category) {
+
+    categoryButtons.forEach(button =>
+        button.classList.toggle("active", button.dataset.category === category)
+    );
+
+    let visibleProducts = 0;
+
+    products.forEach(product => {
+
+        const isVisible =
+            category === "all" ||
+            product.dataset.category === category;
+
+        product.style.display = isVisible ? "" : "none";
+
+        if (isVisible) visibleProducts++;
+
+    });
+
+    noProductsMessage.hidden = visibleProducts > 0;
+}
+
 
 categoryButtons.forEach(button => {
 
     button.addEventListener("click", () => {
+        applyCategory(button.dataset.category);
 
-        categoryButtons.forEach(btn =>
-            btn.classList.remove("active")
-        );
+    });
 
-        button.classList.add("active");
+});
 
-        const category =
-            button.dataset.category;
+document.querySelectorAll(".collection-filter").forEach(link => {
 
-
-        products.forEach(product => {
-
-            if (
-                category === "all" ||
-                product.dataset.category === category
-            ) {
-
-                product.style.display = "";
-
-            } else {
-
-                product.style.display = "none";
-
-            }
-
-        });
-
+    link.addEventListener("click", () => {
+        applyCategory(link.dataset.category);
     });
 
 });
@@ -301,10 +309,27 @@ newsletterForm.addEventListener("submit", (event) => {
 // CHECKOUT
 // ==================================================
 
+const emailjsConfig = {
+    publicKey: "C1_XC4UY6s1El_dre",
+    serviceId: "service_szurq5t",
+    confirmationTemplateId: "template_7m0kd3i"
+};
+
+emailjs.init({
+    publicKey: emailjsConfig.publicKey
+});
+
 const checkoutBtn =
     document.getElementById("checkoutBtn");
 
-checkoutBtn.addEventListener("click", () => {
+const bankDetails = {
+    bankName: "Nickel",
+    accountName: "Ms. Eniola Adelayo Kolawole",
+    accountNumber: "40001325120",
+    iban: "FR7616598000014000132512058"
+};
+
+checkoutBtn.addEventListener("click", async () => {
 
     if (cart.length === 0) {
 
@@ -322,8 +347,50 @@ checkoutBtn.addEventListener("click", () => {
             0
         );
 
-    alert(
-        `Your order total is €${total.toLocaleString()}.\n\nCheckout/payment integration can be connected next.`
-    );
+    const orderReference = `BAL-${Date.now()}`;
+
+    const customerEmail = prompt("Enter your email to receive your order confirmation:");
+
+    if (!customerEmail || !customerEmail.includes("@")) {
+        alert("Please enter a valid email address to continue.");
+        return;
+    }
+
+    const orderItems = cart
+        .map(item => `${item.name} x ${item.quantity}`)
+        .join(", ");
+
+    try {
+        await emailjs.send(
+            emailjsConfig.serviceId,
+            emailjsConfig.confirmationTemplateId,
+            {
+                to_email: customerEmail,
+                customer_email: customerEmail,
+                customer_name: "Customer",
+                order_reference: orderReference,
+                order_total: `€${total.toLocaleString()}`,
+                order_items: orderItems
+            }
+        );
+
+        alert(`Your order has been received. A confirmation email has been sent to ${customerEmail}.\n\nOrder reference: ${orderReference}`);
+    } catch (error) {
+        console.error("Order confirmation email failed:", error);
+        alert("Your order details were prepared, but the confirmation email could not be sent. Please contact us.");
+    }
+
+    alert(`Order reference: ${orderReference}
+
+Your order total is €${total.toLocaleString()}.
+
+Bank transfer details:
+Bank: ${bankDetails.bankName}
+Account name: ${bankDetails.accountName}
+Account number: ${bankDetails.accountNumber}
+IBAN / Sort code: ${bankDetails.iban}
+Payment reference: ${orderReference}
+
+Your order will be processed after payment is confirmed.`);
 
 });
